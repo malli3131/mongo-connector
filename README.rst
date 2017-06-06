@@ -90,6 +90,29 @@ simplest invocation resembles the following::
   mongo-connector -m <mongodb server hostname>:<replica set port> \
                   -t <replication endpoint URL, e.g. http://localhost:8983/solr> \
                   -d <name of doc manager, e.g., solr_doc_manager>
+                  
+Mongo-Connector examples for ElasticSearch:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+We have mongo cluster running on localhost:27017 and elasticsearch running on http://localhost:9200
+
+Note: Every Mongo Database is a index in elasticsearch with name as database name.
+      Every Mongo Collection is index type under the specified index.
+
+1. Indexing one or more Mongo Databases into ElasticSearch:
+    
+    Moving all the documents from one or more Mongo Databases to one more indices.
+   
+2. Indexing the MongoDatabase into ElasticSearch
+
+3. Indexing some of the collections from MongoDatabase into ElasticSearch by exclusing other collections from the same database.
+
+4. Indexing a specific Mongo Collection into ElasticSearch
+
+5. Indexing a specific Mongo Collection or Entire Database or one more Databases into ElasticSearch by including or excluding one or more fields.
+
+5. 
+   
+
 
 mongo-connector has many other options besides those demonstrated above.
 To get a full listing with descriptions, try ``mongo-connector --help``.
